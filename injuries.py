@@ -5,17 +5,19 @@
 from eon4dice import roll
 from Skadetabell import Skadetabell
 
-# injuryroller.injury_effects(13, 'Huggskada mot huvud', +1, verbose=False)
-
 
 class InjuryRoller:
     def __init__(self):
         self.skadetabell = Skadetabell()
 
     def injury_effects(self, damage, damagetable, table_modifier=0, verbose=True):
-        # Funktionen tar skadeverkan och skadetyp och fastställer effekterna av skadan.
-        # Parametern table_modifier är eventuella modifikationer på tabellslaget från t ex vapenegenskap
-        # Returnerar en lista
+        """
+        Funktionen tar skadeverkan och skadetyp och fastställer effekterna av skadan.
+
+        Parametern table_modifier är eventuella modifikationer på tabellslaget från t ex vapenegenskap
+
+        Returnerar en lista
+        """
         effects = [0, 0, '']  # utmattning, dödsslag, beskrivning
 
         # beräkna utmattning
@@ -36,6 +38,7 @@ class InjuryRoller:
                 table_roll = 1
             effects[2] = self.skadetabell.table[damagetable][table_roll]
             if verbose:
-                print(f'{damagetable}{f" (mod: {table_modifier:+})" if table_modifier != 0 else ""}: {effects[2]}(resultat: {result})')
+                print(f'{damagetable}{f" (mod: {table_modifier:+})" if table_modifier != 0 else ""}:'
+                      f' {effects[2]}(resultat: {result})')
 
         return effects
