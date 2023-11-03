@@ -3,7 +3,7 @@
 # Eon IV injuries roller
 
 from eon4dice import roll
-from Skadetabell import Skadetabell
+from eon4injuries.Skadetabell import Skadetabell
 
 
 class InjuryRoller:
