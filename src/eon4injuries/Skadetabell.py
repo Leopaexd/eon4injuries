@@ -24,7 +24,7 @@ class Skadetabell:
             else:
                 raise FileNotFoundError(f"{filename} not found in the current directory or the eon4injuries package.")
 
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding="utf-8") as file:
             current_table = []
             nameflag = True
             for line in file.readlines():
@@ -40,3 +40,4 @@ class Skadetabell:
                     nameflag = False
                 else:
                     current_table[-1] = current_table[-1] + ' ' + line
+
