@@ -36,7 +36,14 @@ class InjuryRoller:
                 table_roll = 20
             elif table_roll < 1:
                 table_roll = 1
-            effects[2] = self.skadetabell.table[damagetable][table_roll]
+
+            result = self.skadetabell.table[damagetable][table_roll]
+
+            # Kolla efter dödsslag
+            if result.split()[1] == '[':
+                effects[1] = int(result.split()[2].rstrip(']'))
+
+            effects[2] = result
             if verbose:
                 print(f'{damagetable}{f" (mod: {table_modifier:+})" if table_modifier != 0 else ""}:'
                       f' {effects[2]}(resultat: {result})')
