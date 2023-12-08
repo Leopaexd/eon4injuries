@@ -10,7 +10,7 @@ eon4injuries = ["skadetabell.txt"]
 
 [project]
 name = "eon4injuries"
-version = "1.0.2.2"
+version = "1.0.2.3"
 authors = [
   { name="Oliver Glant", email="oliver.glant@gmail.com" },
 ]

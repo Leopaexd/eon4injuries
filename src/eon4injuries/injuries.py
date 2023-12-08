@@ -19,6 +19,7 @@ class InjuryRoller:
         Returnerar en lista
         """
         effects = [0, 0, '']  # utmattning, dödsslag, beskrivning
+        damagetable = damagetable.lower().capitalize()  # för att matcha filnamn
 
         # beräkna utmattning
         if damage > 0:
