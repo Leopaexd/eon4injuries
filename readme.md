@@ -3,7 +3,7 @@ Python-modul för att räkna ut och slå fram skador till rollspelet Eon IV
 ## Användning
 
 ### Importera och skapa en instans av klassen InjuryRoller:
-    from injuries import InjuryRoller
+    from eon4injuries import InjuryRoller
     
     injuryroller = InjuryRoller()
 
